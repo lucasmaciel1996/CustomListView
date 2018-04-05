@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MeuprimeiroApp</string>
+    <string name="limpar">Limpar</string>
+    <string name="confirma">Confirmar</string>
+    <string name="edt_name">Digite Seu Nome</string>
+    <string name="edt_cpf">Digite Seu CPF</string>
+</resources>
