@@ -61,7 +61,7 @@ public class ClienteDAO extends SQLiteOpenHelper {
         Log.i("aulas", "Executou o script de upgrade da tabela contatos.");
     }
     /*Metodos CRUD*/
-  public long Save(Cliente cliente){
+  public long save(Cliente cliente){
       SQLiteDatabase db =getWritableDatabase();//Abre Conexao com banco
       try {
           //Dupla com Chave, valor
