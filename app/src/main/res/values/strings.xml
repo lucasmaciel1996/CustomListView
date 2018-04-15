@@ -1,7 +1,36 @@
 <resources>
-    <string name="app_name">MeuprimeiroApp</string>
+    <string name="app_name">Clientes</string>
     <string name="limpar">Limpar</string>
     <string name="confirma">Confirmar</string>
     <string name="edt_name">Digite Seu Nome</string>
     <string name="edt_cpf">Digite Seu CPF</string>
+
+    <!-- ActionBar -->
+    <string name="menu_item_salvar">Salvar</string>
+    <string name="menu_item_excluir">Excluir</string>
+    <string name="menu_item_cancelar">Cancelar</string>
+    <string name="titulo_actionbar_list">Contatos</string>
+
+    <!-- List e Inputs xml-->
+    <string name="tela1_meuscontatos">Meus de Contatos</string>
+    <string name="tela1_foto">Foto do contato</string>
+    <string name="tela1_nome">Nome: </string>
+    <string name="tela1_hint_nome">  insira aqui o nome</string>
+    <string name="tela1_sobrenome">Sobrenome: </string>
+    <string name="tela1_hint_sobrenome">  insira aqui o sobrenome</string>
+    <string name="tela1_telefone">Telefone: </string>
+    <string name="tela1_hint_telefone">  insira aqui o telefone</string>
+
+
+    <string-array name="cbx_sexo">
+        <item>Selecione Seu Sexo</item>
+        <item>Femenino</item>
+        <item>Masculino</item>
+    </string-array>
+    <string name="view_nome">Nome:</string>
+    <string name="view_cpf">CPF:</string>
+    <string name="view_sexo">Sexo:</string>
+    <string name="btn_voltar">voltar</string>
+
+
 </resources>
