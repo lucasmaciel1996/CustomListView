@@ -20,6 +20,7 @@
     <string name="tela1_hint_sobrenome">  insira aqui o sobrenome</string>
     <string name="tela1_telefone">Telefone: </string>
     <string name="tela1_hint_telefone">  insira aqui o telefone</string>
+    <string name="tela1_hint_cpf">  insira aqui o CPF</string>
 
 
     <string-array name="cbx_sexo">

@@ -7,8 +7,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,8 +19,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -28,11 +28,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import com.example.maciel.meuprimeiroapp.dao.ClienteDAO;
 import com.example.maciel.meuprimeiroapp.models.Cliente;
-
 import java.io.ByteArrayOutputStream;
+
+import java.io.FileNotFoundException;
 import java.nio.file.FileSystemNotFoundException;
-import java.util.ArrayList;
+
 import java.util.List;
+import com.example.maciel.meuprimeiroapp.R;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnClickListener,SearchView.OnQueryTextListener,android.support.v7.app.ActionBar.TabListener {
 
@@ -63,16 +65,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
         cliente = new Cliente();
 
         if(isTablet(this)){
-            setContentView(android.R.layout.activity_tablet);
-            getSupportActionBar().setTitle(android.R.string.titulo_actionbar_list);//insere titulo para a janela
+            setContentView(R.layout.activity_tablet);
+            getSupportActionBar().setTitle(R.string.titulo_actionbar_list);//insere titulo para a janela
 
             //mapeia os componentes de UI
-            edt_nome = (EditText) findViewById(R.id.editText_nome);
-            edt_cpf = (EditText) findViewById(R.id.editText_sobrenome);
-            edt_telefene= (EditText) findViewById(R.id.editText_telefone);
+            edt_nome = (EditText) findViewById(R.id.edt_name);
+            edt_cpf = (EditText) findViewById(R.id.edt_cpf);
+            edt_telefene= (EditText) findViewById(R.id.edt_telefone);
             imvFoto= (ImageView) findViewById(R.id.imageView);
             lvClientes = (ListView) findViewById(R.id.listView);
-            lvClientes.setOnItemClickListener(this); //adiciona a lista de ouvintes
+            lvClientes.setOnItemClickListener((AdapterView.OnItemClickListener) this); //adiciona a lista de ouvintes
             new Task().execute(GETALL); //executa a operação GET em segundo plano
 
         }else{
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
         switch (tab.getPosition()){
             case 0:{
                 //mapeia os componestes da UI
-                setContentView(android.R.layout.activity_smartphone_list);
+                setContentView(R.layout.activity_smartphone_list);
 
                 //insere titulo ao action bar
                 getSupportActionBar().setTitle("Clintes");
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
                 //mapeias os componetes de  activity_list.xm
                 //mapeia os componentes de activity_list.xml
                 lvClientes = (ListView) findViewById(R.id.listView);
-                lvClientes.setOnItemClickListener(MainActivity.this); //registra o tratador de eventos para cada item da ListView
+                lvClientes.setOnItemClickListener((AdapterView.OnItemClickListener) MainActivity.this); //registra o tratador de eventos para cada item da ListView
 
                 new Task().execute(GETALL); //executa a operação GET em segundo plano
 
@@ -126,10 +128,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
                 getSupportActionBar().setTitle("Edição");
 
                 //mapeia os componentes de activity_inputs.xml
-                edt_nome = (EditText) findViewById(R.id.editText_nome);
-                edt_cpf = (EditText) findViewById(R.id.editText_cpf);
-                edt_telefene = (EditText) findViewById(R.id.editText_telefone);
-                cbx_sexo = (Spinner) findViewById(R.id.editText_sexo);
+                edt_nome = (EditText) findViewById(R.id.edt_name);
+                edt_cpf = (EditText) findViewById(R.id.edt_cpf);
+                edt_telefene = (EditText) findViewById(R.id.edt_telefone);
+                cbx_sexo = (Spinner) findViewById(R.id.cbx_sexo);
                 imvFoto = (ImageView) findViewById(R.id.imageView);
 
                 break;
@@ -185,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
             case R.id.menuitem_cancelar:
                 LimparFormulario();
                 break;
-            case R.id.meniitem_excluir:
+            case R.id.menuitem_excluir:
                 if(cliente !=null && !edt_telefene.getText().toString().isEmpty()&&!edt_nome.getText().toString().isEmpty()&&!edt_cpf.getText().toString().isEmpty()
                 &&!cbx_sexo.getSelectedItem().toString().isEmpty()){
                     new Task().execute(DELETE); //executa a operação DELETE em segundo plano
@@ -223,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
         return true;
     }
     //limpa o formulário
-    private void limparFormulario(){
+    private void LimparFormulario(){
         edt_nome.setText(null);
         edt_cpf.setText(null);
         edt_telefene.setText(null);
@@ -233,7 +235,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
         imagem = null;
         cliente = new Cliente(); //apaga dados antigos
     }
-    @Override
+
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         if(!isTablet(MainActivity.this)) {
             tab2.select(); //seleciona a aba 2
@@ -257,7 +259,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
      */
     public void carregarListView(List<Cliente>clientes){
         //cria um objeto da classe ListAdapter, um adaptador List -> ListView
-        ListAdapter dadosAdapter= new ListAdapter(this,clientes);
+        ListAdapter dadosAdapter= new com.example.maciel.meuprimeiroapp.adapter.ListAdapter(this,clientes);
         //associa o adaptador a ListView
         lvClientes.setAdapter(dadosAdapter);
     }
@@ -283,6 +285,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
      */
 
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -297,7 +300,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
                 imagem = img;//coloca a imagem no objeto imagem (um array de bytes (byte[]))
             }catch (FileSystemNotFoundException e){
                 e.printStackTrace();
-
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
             }
         }
     }
@@ -359,7 +363,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
               carregarListView(clientes);
           }else if(count>0){
               Toast.makeText(MainActivity.this, "Operação realizada.", Toast.LENGTH_SHORT).show();
-              limparFormulario();
+              LimparFormulario();
               if(!isTablet(MainActivity.this)){
                  tab1.select();
                   //onTabSelected(tab1, null); //chama o tratador de eventos para carregar os componentes

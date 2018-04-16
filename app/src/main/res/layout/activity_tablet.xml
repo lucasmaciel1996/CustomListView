@@ -3,26 +3,25 @@
     android:id="@+id/container_main_tablet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal" >
 
     <LinearLayout
-        android:id="@+id/containet_list"
-        android:layout_weidth="0dp"
+        android:id="@+id/container_list"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weigth="1">
+        android:layout_weight="1">
 
         <include layout="@layout/activity_smartphone_list"/>
 
     </LinearLayout>
 
-
     <LinearLayout
-        android:id="@+id/containet_inputs"
-        android:layout_weidth="0dp"
+        android:id="@+id/container_inputs"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weigth="2">
+        android:layout_weight="2">
 
         <include layout="@layout/activity_smartphone_inputs"/>
 

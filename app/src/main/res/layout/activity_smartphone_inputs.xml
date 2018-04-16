@@ -22,7 +22,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/edt_name"
-            android:hint="@string/nome" />
+            android:hint="@string/tela1_hint_nome" />
 
         <TextView
             android:layout_width="match_parent"
@@ -46,7 +46,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textpersonName"
+            android:inputType="textPersonName"
+            android:hint="@string/tela1_hint_cpf"
             android:ems="10"
             android:id="@+id/edt_telefone" />
 
@@ -67,7 +68,7 @@
             android:id="@+id/imageView"
             android:src="@drawable/foto_sombra"
             android:layout_gravity="center_horizontal"
-            android:layoutmargonTop="30dp"
+            android:layout_marginTop="30dp"
             android:onClick="caregarImagem" />
 
     </LinearLayout>
