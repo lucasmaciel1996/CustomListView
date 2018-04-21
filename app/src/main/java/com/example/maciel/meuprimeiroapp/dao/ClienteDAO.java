@@ -68,7 +68,7 @@ public class ClienteDAO extends SQLiteOpenHelper {
           ContentValues values = new ContentValues();
           values.put("nome", cliente.getNome());
           values.put("cpf", cliente.getCpf());
-          values.put("sexo", cliente.getSexo());
+          //values.put("sexo", cliente.getSexo());
           values.put("telefone", cliente.getTelefone());
           values.put("imagem", cliente.getImagem());
 
@@ -131,7 +131,7 @@ public class ClienteDAO extends SQLiteOpenHelper {
               cliente.setId(c.getLong(c.getColumnIndex("_id")));
               cliente.setNome(c.getString(c.getColumnIndex("nome")));
               cliente.setCpf(c.getString(c.getColumnIndex("cpf")));
-              cliente.setSexo(c.getString(c.getColumnIndex("sexo")));
+              //cliente.setSexo(c.getString(c.getColumnIndex("sexo")));
               cliente.setTelefone(c.getString(c.getColumnIndex("telefone")));
               cliente.setImagem(c.getBlob(c.getColumnIndex("imagem")));
 

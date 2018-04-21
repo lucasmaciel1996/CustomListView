@@ -16,6 +16,7 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/container_inputs"
         android:layout_width="0dp"
@@ -26,6 +27,8 @@
         <include layout="@layout/activity_smartphone_inputs"/>
 
     </LinearLayout>
+
+
 
 
 </LinearLayout>

@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -13,63 +15,33 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="nome"
-            android:id="@+id/txt_nome" />
-
+            android:text="Nome"
+            android:id="@+id/textview_nome" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/edt_name"
-            android:hint="@string/tela1_hint_nome" />
+            android:hint="Nome"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CPF"
-            android:id="@+id/txt_cpf" />
-
+            android:id="@+id/textview_cpf" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/edt_cpf" />
-
+            android:hint="Telefone"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Telefone"
-            android:id="@+id/txt_telefone" />
-
+            android:id="@+id/textview_telefone" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="@string/tela1_hint_cpf"
-            android:ems="10"
-            android:id="@+id/edt_telefone" />
+            android:hint="CPF"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sexo"
-            android:id="@+id/txt_sexo" />
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/cbx_sexo" />
-
-        <ImageView
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/foto_sombra"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:onClick="caregarImagem" />
 
     </LinearLayout>
 

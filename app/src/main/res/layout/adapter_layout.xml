@@ -49,21 +49,7 @@
                     android:layout_height="wrap_content">
                 </TextView>
             </TableRow>
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/label_sexo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tela1_nome">
-                </TextView>
-                <TextView
-                    android:id="@+id/tv_item_sexo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </TextView>
-            </TableRow>
+       
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">

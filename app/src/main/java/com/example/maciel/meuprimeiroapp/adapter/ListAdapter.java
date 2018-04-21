@@ -35,13 +35,13 @@ public class ListAdapter extends ArrayAdapter<Cliente> {
       //mapeia view do layout do adaptador
       TextView tvNome = (TextView) convertview.findViewById(R.id.tv_item_nome);
       TextView tvTelfone = (TextView) convertview.findViewById(R.id.tv_item_telefone);
-      TextView tvSexo = (TextView) convertview.findViewById(R.id.tv_item_sexo);
+      //TextView tvSexo = (TextView) convertview.findViewById(R.id.tv_item_sexo);
       TextView tvCpf = (TextView) convertview.findViewById(R.id.tv_item_cpf);
 
       // popula as views
       tvNome.setText(cliente.getNome());
       tvTelfone.setText(cliente.getTelefone());
-      tvSexo.setText(cliente.getSexo());
+     // tvSexo.setText(cliente.getSexo());
       tvCpf.setText(cliente.getCpf());
 
       //maapeia view da imagem

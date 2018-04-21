@@ -9,7 +9,6 @@ public class Cliente implements Serializable{
     private Long id;
     private String nome;
     private String cpf;
-    private String sexo;
     private String telefone;
     public byte[] imagem;
 
@@ -37,13 +36,7 @@ public class Cliente implements Serializable{
         this.cpf = cpf;
     }
 
-    public String getSexo() {
-        return sexo;
-    }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
 
     public byte[] getImagem() {
         return imagem;
@@ -66,7 +59,6 @@ public class Cliente implements Serializable{
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", npf='" + cpf + '\'' +
-                ", sexo='" + sexo + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", imagem=" + Arrays.toString(imagem) +
                 '}';
