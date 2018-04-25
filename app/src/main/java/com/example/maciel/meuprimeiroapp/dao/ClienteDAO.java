@@ -73,7 +73,7 @@ public class ClienteDAO extends SQLiteOpenHelper {
           values.put("imagem", cliente.getImagem());
 
           //Inicio da operação
-          if (cliente.getId() == null) {
+          if (cliente.getId()==null ) {
               //insert no DB
               return db.insert("cliente", null, values);
           } else {

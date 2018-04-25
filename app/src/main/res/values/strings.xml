@@ -4,6 +4,7 @@
     <string name="confirma">Confirmar</string>
     <string name="edt_name">Digite Seu Nome</string>
     <string name="edt_cpf">Digite Seu CPF</string>
+    <string name="imv_perfil">Selecione foto para perfil</string>
 
     <!-- ActionBar -->
     <string name="menu_item_salvar">Salvar</string>
