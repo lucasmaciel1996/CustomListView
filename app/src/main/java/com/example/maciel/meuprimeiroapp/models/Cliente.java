@@ -6,17 +6,17 @@ import java.util.Arrays;
 public class Cliente implements Serializable{
     private static final long serialVersionUID = 1L;
 
-    private Long id;
+    private long id;
     private String nome;
     private String cpf;
     private String telefone;
     public byte[] imagem;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -36,17 +36,16 @@ public class Cliente implements Serializable{
         this.cpf = cpf;
     }
 
-
-
-    public byte[] getImagem() {
-        return imagem;
-    }
     public String getTelefone() {
         return telefone;
     }
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public byte[] getImagem() {
+        return imagem;
     }
 
     public void setImagem(byte[] imagem) {
@@ -58,7 +57,7 @@ public class Cliente implements Serializable{
         return "Cliente{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", npf='" + cpf + '\'' +
+                ", cpf='" + cpf + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", imagem=" + Arrays.toString(imagem) +
                 '}';
