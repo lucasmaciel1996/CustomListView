@@ -64,11 +64,10 @@
             android:id="@+id/imv_foto"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:src="@mipmap/ic_user"
+            android:src="@drawable/foto_sombra"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            android:contentDescription="Foto"
-            android:onClick="carregarImagem" />
+            android:onClick="selecionarImagem" />
     </LinearLayout>
 
 </LinearLayout>

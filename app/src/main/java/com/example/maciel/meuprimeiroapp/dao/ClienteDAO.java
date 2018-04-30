@@ -58,6 +58,11 @@ public class ClienteDAO extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        Log.d("aulas", "Upgrade da versão " + oldVersion + " para "
+                + newVersion + ", destruindo tudo.");
+        db.execSQL("DROP TABLE IF EXISTS contato");
+        onCreate(db); // chama onCreate e recria o banco de dados
+        Log.i("aulas", "Executou o script de upgrade da tabela contatos.");
 
     }
 
@@ -89,6 +94,14 @@ public class ClienteDAO extends SQLiteOpenHelper {
         try{
             //retorna lista com dados do banco
             return toList(sqLiteDatabase.rawQuery("select * from cliente",null));
+        }finally {
+            sqLiteDatabase.close();
+        }
+    }
+    public List<Cliente>getbyName(String nome){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        try{
+            return toList(sqLiteDatabase.rawQuery("select * from cliente where nome like'%"+nome+"%'",null));
         }finally {
             sqLiteDatabase.close();
         }

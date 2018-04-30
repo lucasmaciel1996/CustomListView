@@ -53,7 +53,8 @@ public class ListViewAdapter extends ArrayAdapter<Cliente> {
             imv_imagem.setImageResource(R.drawable.foto_sombra);
         }
 
-        Log.d(TAG,"Adapater View"+" "+cliente.getId()+" "+cliente.getNome()+" "+cliente.getCpf()+" "+cliente.getTelefone()+" "+cliente.getImagem());
+        // validacao para estava listando
+       // Log.d(TAG,"Adapater View"+" "+cliente.getId()+" "+cliente.getNome()+" "+cliente.getCpf()+" "+cliente.getTelefone()+" "+cliente.getImagem());
 
         return convertView;
     }
