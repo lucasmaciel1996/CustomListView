@@ -39,9 +39,10 @@
 
     <!--PopUp -->
     <string name="bio">Nasceu em dezembro de 1996, iniciou seus estudos na área de informática
-no ano 2015, logo no início da faculdade ficou fascinado com possibilidade do mundo desenvolvimento de Softawre.
+no ano 2015, logo no início da faculdade ficou fascinado com possibilidade do mundo desenvolvimento de Software.
+   </string>
+    <string name="contato">Contato: lucas333maciel@gmail.com</string>
 
-   Contato:lucas333maciel@gmail.com</string>
 
 
 </resources>

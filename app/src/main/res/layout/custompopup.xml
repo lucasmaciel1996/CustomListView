@@ -70,8 +70,18 @@
                 android:textSize="18dp"
                 android:gravity="center"
 
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contato"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginTop="7dp"
 
                 />
+
 
         </LinearLayout>
 

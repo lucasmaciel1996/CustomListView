@@ -189,7 +189,11 @@ public class MainActivity extends AppCompatActivity  implements SearchView.OnQue
     //trata eventos dos itens do menu da ActionBar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        tab1.select(); //seleciona a aba 1
+        //verifica se um tablet se for diferente leciona tab1
+        if(!isTablet(this)){
+            //seleciona a aba 1
+            tab1.select();
+        }
 
         switch (item.getItemId()){
             case R.id.menu_item_salvar:
