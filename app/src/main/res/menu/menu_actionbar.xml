@@ -18,9 +18,17 @@
             app:showAsAction="always" />
         <item
             android:id="@+id/menu_item_excluir"
-            android:title="Excluir" />
+            android:title="Excluir"
+            android:icon="@mipmap/ic_delete"
+            />
         <item
             android:id="@+id/menu_item_cencelar"
-            android:title="Cancelar" />
+            android:title="Cancelar"
+            />
+        <item
+            android:id="@+id/menu_item_develope"
+            android:title="Desenvoldedor"
+
+            />
     </group>
 </menu>

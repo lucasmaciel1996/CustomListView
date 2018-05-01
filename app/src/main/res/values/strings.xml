@@ -17,11 +17,14 @@
     <string name="tela1_foto">Foto do contato</string>
     <string name="tela1_nome">Nome: </string>
     <string name="tela1_hint_nome">  insira aqui o nome</string>
-    <string name="tela1_sobrenome">Sobrenome: </string>
+    <string name="tela1_cpf">CPF: </string>
     <string name="tela1_hint_sobrenome">  insira aqui o sobrenome</string>
     <string name="tela1_telefone">Telefone: </string>
     <string name="tela1_hint_telefone">  insira aqui o telefone</string>
     <string name="tela1_hint_cpf">  insira aqui o CPF</string>
+
+
+
 
 
     <string-array name="cbx_sexo">
@@ -33,6 +36,12 @@
     <string name="view_cpf">CPF:</string>
     <string name="view_sexo">Sexo:</string>
     <string name="btn_voltar">voltar</string>
+
+    <!--PopUp -->
+    <string name="bio">Nasceu em dezembro de 1996, iniciou seus estudos na área de informática
+no ano 2015, logo no início da faculdade ficou fascinado com possibilidade do mundo desenvolvimento de Softawre.
+
+   Contato:lucas333maciel@gmail.com</string>
 
 
 </resources>

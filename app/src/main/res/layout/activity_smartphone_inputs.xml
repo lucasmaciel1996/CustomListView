@@ -16,7 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tela1_nome"
-            android:id="@+id/textView_nome" />
+            android:id="@+id/textView_nome"
+            />
 
         <EditText
             android:layout_width="match_parent"
@@ -24,7 +25,9 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText_nome"
-            android:hint="@string/tela1_hint_nome" />
+            android:hint="@string/tela1_hint_nome"
+            android:textAllCaps="true"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,7 +38,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:ems="10"
             android:id="@+id/editText_cpf"
             android:hint="@string/tela1_hint_cpf" />
@@ -49,7 +52,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
+            android:inputType="number"
             android:ems="10"
             android:id="@+id/editText_telefone"
             android:hint="@string/tela1_hint_telefone" />
@@ -60,10 +63,10 @@
             android:layout_height="wrap_content"
             android:text="@string/imv_perfil" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imv_foto"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
+            android:layout_width="260dp"
+            android:layout_height="160dp"
             android:src="@drawable/foto_sombra"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
