@@ -3,82 +3,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imv_item"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="20dp"
-        android:padding="5dp"
-        android:contentDescription="@string/tela1_foto"
-        android:src="@drawable/foto_sombra" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv_item"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:contentDescription="@string/Tv_foto"
+            android:src="@drawable/foto_sombra" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp" >
-
-        <TableLayout
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" >
 
-            <TableRow
+            <TableLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" >
-                android:layout_marginTop="1dp"
-                <TextView
-                    android:id="@+id/label_cpf"
+                android:layout_height="wrap_content" >
+
+                <TableRow
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tela1_cpf" />
+                    android:layout_height="match_parent" >
+                    android:layout_marginTop="1dp"
+                    <TextView
+                        android:id="@+id/label_cpf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Tv_cpf" />
 
-                <TextView
-                    android:id="@+id/tv_item_cpf"
-                    android:layout_width="219dp"
-                    android:layout_height="wrap_content"
-                    android:hint="values"
-                    android:padding="3dp"/>
-            </TableRow>
+                    <TextView
+                        android:id="@+id/tv_item_cpf"
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/TV_hint_cpf"
+                        android:padding="3dp"/>
+                </TableRow>
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="1dp">
-
-                <TextView
-                    android:id="@+id/label_nome"
+                <TableRow
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tela1_nome" />
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp">
 
-                <TextView
-                    android:id="@+id/tv_item_nome"
+                    <TextView
+                        android:id="@+id/label_nome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Tv_nome" />
+
+                    <TextView
+                        android:id="@+id/tv_item_nome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/TV_hint_nome"
+                        android:padding="3dp"/>
+                </TableRow>
+
+                <TableRow
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="values"
-                    android:padding="3dp"/>
-            </TableRow>
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp">
+                    <TextView
+                        android:id="@+id/label_telefone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Tv_telefone" />
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="1dp">
-
-
-                <TextView
-                    android:id="@+id/label_telefone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tela1_telefone" />
-
-                <TextView
-                    android:id="@+id/tv_item_telefone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="values"
-                    android:padding="3dp"
-                    />
-            </TableRow>
-        </TableLayout>
-    </LinearLayout>
-
+                    <TextView
+                        android:id="@+id/tv_item_telefone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Tv_hint_telefone"
+                        android:padding="3dp"
+                        />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
 </LinearLayout>

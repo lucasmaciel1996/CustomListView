@@ -13,55 +13,55 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tela1_nome"
-            android:id="@+id/textView_nome"
+            android:text="@string/Tv_nome"
             />
 
         <EditText
+            android:id="@+id/editText_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText_nome"
-            android:hint="@string/tela1_hint_nome"
+            android:hint="@string/TV_hint_nome"
             android:textAllCaps="true"
             />
 
         <TextView
+            android:id="@+id/textView_cpf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tela1_hint_cpf"
-            android:id="@+id/textView_cpf" />
+            android:text="@string/Tv_cpf" />
 
         <EditText
+            android:id="@+id/editText_cpf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText_cpf"
-            android:hint="@string/tela1_hint_cpf" />
+            android:hint="@string/TV_hint_cpf" />
 
         <TextView
+            android:id="@+id/textView_telefone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tela1_telefone"
-            android:id="@+id/textView_telefone" />
+            android:text="@string/Tv_telefone" />
 
         <EditText
+            android:id="@+id/editText_telefone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText_telefone"
-            android:hint="@string/tela1_hint_telefone" />
+            android:hint="@string/Tv_hint_telefone" />
 
         <TextView
             android:id="@+id/txtv_perfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/imv_perfil" />
+            android:text="@string/Imv_perfil" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imv_foto"

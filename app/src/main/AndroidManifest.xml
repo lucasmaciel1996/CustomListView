@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.maciel.meuprimeiroapp">
 
-    <!-- para acesso ao cartão sd -->
-
+    <!--Permição para Leitura e Escrita cartão sd -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--Permição para acesso internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
 
     <application

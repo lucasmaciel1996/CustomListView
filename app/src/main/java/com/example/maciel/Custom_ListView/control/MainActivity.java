@@ -1,4 +1,4 @@
-package com.example.maciel.meuprimeiroapp.control;
+package com.example.maciel.Custom_ListView.control;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -26,20 +26,22 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.maciel.meuprimeiroapp.adapter.ListViewAdapter;
+import com.example.maciel.Custom_ListView.adapter.ListViewAdapter;
+import com.example.maciel.Custom_ListView.dao.ClienteDAO;
+import com.example.maciel.Custom_ListView.models.Cliente;
 import com.example.maciel.meuprimeiroapp.R;
-import com.example.maciel.meuprimeiroapp.dao.ClienteDAO;
-import com.example.maciel.meuprimeiroapp.models.Cliente;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
-
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.util.List;
+/*
+    *Create By Lucas Maciel
+ */
 
 public class MainActivity extends AppCompatActivity  implements SearchView.OnQueryTextListener, AdapterView.OnItemClickListener, ActionBar.TabListener{
-    //instacia global
+
+    //Instacia global
     private static final String TAG="clientesbd";
     private ClienteDAO clienteDAO;
     private static Cliente cliente = null;
@@ -55,18 +57,16 @@ public class MainActivity extends AppCompatActivity  implements SearchView.OnQue
     private static final String SAVE = "save";
     private static final String DELETE = "delete";
     private String nameFind = "";
-    ActionBar.Tab tab0,tab1; //uma das abas da activity, quando em smartphone
+    ActionBar.Tab tab0,tab1; // Abas da activity, quando em smartphone
     private byte[]imagem=null; //imagem do cliente
-
-    //ListView listview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-         //intacia dos obejtos
+         //Instacia dos obejtos
          cliente =  new Cliente();
-         //instacia objeto de acesso ao BD
+         //Instacia objeto de acesso ao BD
          clienteDAO= ClienteDAO.getInstance(this);
 
          if(isTablet(this)){

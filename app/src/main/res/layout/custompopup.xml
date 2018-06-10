@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lucas Maciel"
+            android:text="@string/Tv_dev"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_gravity="center"
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Curitiba Brasil"
+            android:text="@string/Tv_dev_regiao"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_gravity="center"
@@ -65,7 +65,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/bio"
+                android:text="@string/Tv_bio"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 android:gravity="center"
@@ -74,7 +74,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/contato"
+                android:text="@string/TV_contato"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 android:gravity="center"

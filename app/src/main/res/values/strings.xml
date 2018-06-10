@@ -1,10 +1,33 @@
 <resources>
-    <string name="app_name">Clientes</string>
+    <!--Buttons -->
     <string name="limpar">Limpar</string>
     <string name="confirma">Confirmar</string>
-    <string name="edt_name">Digite Seu Nome</string>
-    <string name="edt_cpf">Digite Seu CPF</string>
-    <string name="imv_perfil">Selecione foto para perfil</string>
+    <string name="btn_voltar">voltar</string>
+
+    <!--TextView, EditText, ImageView -->
+    <string name="app_name">Clientes</string>
+
+    <string name="Tv_cpf">CPF:</string>
+    <string name="Tv_nome">Nome:</string>
+    <string name="Tv_dev">Lucas Maciel</string>
+    <string name="Tv_dev_regiao">Curitiba Brasil</string>
+    <string name="TV_contato">Contato: lucas333maciel@gmail.com</string>
+    <string name="Tv_sexo">Sexo:</string>
+    <string name="Tv_telefone">Telefone: </string>
+    <string name="Tv_contatos">Meus de Contatos</string>
+    <string name="Tv_foto">Foto do contato</string>
+
+    <string name="TV_hint_nome">Insira aqui o nome</string>
+    <string name="Tv_hint_sobrenome">Insira aqui o sobrenome</string>
+    <string name="Tv_hint_telefone">Insira aqui o telefone</string>
+    <string name="TV_hint_cpf">Insira aqui o CPF</string>
+
+    <string name="Edt_name">Digite Seu Nome</string>
+    <string name="Edt_cpf">Digite Seu CPF</string>
+    <string name="Edt_sexo">Digite Seu Sexo</string>
+
+    <string name="Imv_perfil">Selecione foto para perfil</string>
+
 
     <!-- ActionBar -->
     <string name="menu_item_salvar">Salvar</string>
@@ -13,35 +36,23 @@
     <string name="titulo_actionbar_list">Contatos</string>
 
     <!-- List e Inputs xml-->
-    <string name="tela1_meuscontatos">Meus de Contatos</string>
-    <string name="tela1_foto">Foto do contato</string>
-    <string name="tela1_nome">Nome: </string>
-    <string name="tela1_hint_nome">  insira aqui o nome</string>
-    <string name="tela1_cpf">CPF: </string>
-    <string name="tela1_hint_sobrenome">  insira aqui o sobrenome</string>
-    <string name="tela1_telefone">Telefone: </string>
-    <string name="tela1_hint_telefone">  insira aqui o telefone</string>
-    <string name="tela1_hint_cpf">  insira aqui o CPF</string>
 
 
-
-
-
+    <!--Spinner -->
     <string-array name="cbx_sexo">
         <item>Selecione Seu Sexo</item>
         <item>Femenino</item>
         <item>Masculino</item>
     </string-array>
-    <string name="view_nome">Nome:</string>
-    <string name="view_cpf">CPF:</string>
-    <string name="view_sexo">Sexo:</string>
-    <string name="btn_voltar">voltar</string>
 
     <!--PopUp -->
-    <string name="bio">Nasceu em dezembro de 1996, iniciou seus estudos na área de informática
-no ano 2015, logo no início da faculdade ficou fascinado com possibilidade do mundo desenvolvimento de Software.
+    <string name="Tv_bio">
+        Nasceu em dezembro de 1996, iniciou seus estudos na área de
+        informática no ano 2015, logo no início da faculdade ficou
+        fascinado com possibilidade do mundo desenvolvimento de Software.
    </string>
-    <string name="contato">Contato: lucas333maciel@gmail.com</string>
+
+
 
 
 

@@ -1,6 +1,7 @@
-package com.example.maciel.meuprimeiroapp.adapter;
+package com.example.maciel.Custom_ListView.adapter;
 
-import android.content.Context;
+import
+        android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
@@ -13,8 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.maciel.Custom_ListView.models.Cliente;
 import com.example.maciel.meuprimeiroapp.R;
-import com.example.maciel.meuprimeiroapp.models.Cliente;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.maciel.meuprimeiroapp.models;
+package com.example.maciel.Custom_ListView.models;
 
 import java.io.Serializable;
 import java.util.Arrays;
